@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <h2>Nouveau post</h2>
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <div class="form-group">
+        <label for="titre">
+          Titre
+        </label>
+        <input type="text" id="titre" class="form-control" name="titre" ngModel required>
+      </div>
+      <div class="form-group">
+          <label for="contenu">
+            Contenu
+          </label>
+          <textarea type="text" id="contenu" class="form-control" name="contenu" ngModel required></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit" [disabled]="f.invalid">Enregistrer</button>
+    </form>
+  </div>
+</div>
